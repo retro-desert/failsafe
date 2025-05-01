@@ -1,0 +1,20 @@
+services:
+  failsafe:
+    container_name: failsafe
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./logs:/failsafe/logs
+    environment:
+      TIME_LIMIT: ${TIME_LIMIT}
+      EXTEND_TIME: ${EXTEND_TIME}
+      TELEGRAM_TOKEN: ${TELEGRAM_TOKEN}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID}
+      MESSAGE: ${MESSAGE}
+      EMAIL_DISABLE: ${EMAIL_DISABLE}
+      TELEGRAM_DISABLE: ${TELEGRAM_DISABLE}
+      EMAIL_USER: ${EMAIL_USER}
+      EMAIL_PASS: ${EMAIL_PASS}
+      EMAIL_TO: ${EMAIL_TO}
+      EMAIL_SUBJECT: ${EMAIL_SUBJECT}
