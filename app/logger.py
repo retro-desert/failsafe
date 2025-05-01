@@ -4,7 +4,7 @@ import os
 
 LOG_DIR = "logs"
 LOG_FILE = os.path.join(LOG_DIR, "failsafe.log")
-FALLBACK_LOG_FILE = f"/tmp/failsafe.log"
+FALLBACK_LOG_FILE = "/tmp/failsafe.log"
 
 try:
     os.makedirs(LOG_DIR, exist_ok=True)

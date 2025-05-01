@@ -1,6 +1,6 @@
 import smtplib
-import requests
 from email.mime.text import MIMEText
+import requests
 from app import config
 from app.logger import get_logger
 
@@ -15,8 +15,8 @@ def send_telegram(message: str):
         response = requests.post(url, data=data, timeout=5)
         response.raise_for_status()
         log.info("Telegram message sent")
-    except Exception as e:
-        log.error(f"Telegram error: {e}")
+    except Exception as err:
+        log.error("Telegram error: %s", err)
 
 
 def send_email(subject: str, body: str):
@@ -31,5 +31,5 @@ def send_email(subject: str, body: str):
             server.login(config.EMAIL_USER, config.EMAIL_PASS)
             server.send_message(msg)
             log.info("Email sent")
-    except Exception as e:
-        log.error(f"Email error: {e}")
+    except Exception as err:
+        log.error("Email error: %s", err)

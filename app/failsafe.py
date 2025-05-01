@@ -61,7 +61,7 @@ def listen_input():
                     exit_event.set()
                 elif char == "e":
                     print()
-                    log.info(f"Failsafe extended by {config.EXTEND_TIME}")
+                    log.info("Failsafe extended by %s", config.EXTEND_TIME)
                     timer_reset_event.set()
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
