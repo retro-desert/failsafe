@@ -1,3 +1,4 @@
+"""Base module with abstract class"""
 from abc import ABC, abstractmethod
 
 

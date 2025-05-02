@@ -1,3 +1,4 @@
+"""Module with all custom messages"""
 from app import config
 
 LOG = {

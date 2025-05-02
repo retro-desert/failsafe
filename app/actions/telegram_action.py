@@ -1,3 +1,4 @@
+"""Telegram notifier"""
 from app.actions.base import Action
 from app import config, notify
 

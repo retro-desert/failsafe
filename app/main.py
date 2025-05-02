@@ -1,4 +1,5 @@
-from app.core import failsafe
+"""Main module"""
+from app.core import failsafe, container
 from app import logger
 from app import version
 
@@ -13,7 +14,7 @@ def main():
     """Main function"""
     show_logo()
     logger.setup_logger()
-    failsafe.start_failsafe()
+    failsafe.start_failsafe(container=container.Container())
 
 
 if __name__ == "__main__":

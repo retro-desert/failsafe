@@ -1,5 +1,6 @@
+"""Email notifier"""
 from app.actions.base import Action
-from app import config, notify
+from app import notify, config
 
 
 class EmailAction(Action):
