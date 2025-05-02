@@ -2,7 +2,8 @@ from abc import ABC, abstractmethod
 
 
 class Action(ABC):
-    """Abstract method"""
+    """Abstract class"""
     @abstractmethod
     def run(self):
+        """Run method"""
         pass

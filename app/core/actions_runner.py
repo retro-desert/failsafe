@@ -14,6 +14,7 @@ class ActionRunner:
         ]
 
     def run_all(self):
+        """Run all actions"""
         log.warning("Failsafe triggered. Executing actions...")
         for action in self.actions:
             try:
