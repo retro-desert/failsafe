@@ -26,7 +26,7 @@
     source venv/bin/activate
     pip install -r requirements.txt
     ```
-3. **Configure the .env file according to the .env_example**
+3. **Configure the .env file according to the .env.example**
 
 ---
 ## ▶️Usage
