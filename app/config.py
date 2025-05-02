@@ -1,3 +1,4 @@
+"""Config module"""
 from decouple import config
 
 # Message to send

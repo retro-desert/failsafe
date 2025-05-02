@@ -6,6 +6,7 @@ from app.logger import get_logger
 
 
 class Container:
+    """Container class"""
     def __init__(self):
         self.logger = get_logger
         self.config = config
