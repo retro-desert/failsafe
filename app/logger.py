@@ -1,10 +1,11 @@
 import logging
 from logging.handlers import RotatingFileHandler
 import os
+from app import config
 
-LOG_DIR = "logs"
-LOG_FILE = os.path.join(LOG_DIR, "failsafe.log")
-FALLBACK_LOG_FILE = "/tmp/failsafe.log"
+LOG_DIR = config.LOG_DIR
+LOG_FILE = os.path.join(LOG_DIR, config.LOG_FILENAME)
+FALLBACK_LOG_FILE = config.FALLBACK_LOG_FILE
 
 try:
     os.makedirs(LOG_DIR, exist_ok=True)
@@ -12,7 +13,7 @@ except PermissionError:
     pass
 
 
-def setup_logger():
+def setup_logger() -> None:
     """Call this once at startup to configure global logging"""
     if logging.getLogger().hasHandlers():
         return
@@ -37,6 +38,6 @@ def setup_logger():
     )
 
 
-def get_logger(name: str):
+def get_logger(name: str) -> logging.Logger:
     """Return a logger"""
     return logging.getLogger(name)
