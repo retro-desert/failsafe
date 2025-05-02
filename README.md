@@ -1,5 +1,6 @@
 # Failsafe
 ![Code Quality](https://img.shields.io/badge/code%20quality-9+%2F10-brightgreen?logo=python&labelColor=2e2e2e)
+![Pylint](https://github.com/retro-desert/failsafe/actions/workflows/pylint.yml/badge.svg)
 
 **Failsafe** is a terminal-based watchdog timer that trigger actions unless manually canceled or extended
 
