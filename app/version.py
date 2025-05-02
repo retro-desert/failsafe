@@ -5,5 +5,7 @@ ASCII = r"""
 | |_ / _ \  | || |   \___ \ / _ \ | |_  |  _|  
 |  _/ ___ \ | || |___ ___) / ___ \|  _| | |___ 
 |_|/_/   \_\___|_____|____/_/   \_\_|   |_____|
+created by @retro-desert
+→ github.com/retro-desert · eleet.nl
 """
-__version__ = "1.0"
+__version__ = "2.0.0"
