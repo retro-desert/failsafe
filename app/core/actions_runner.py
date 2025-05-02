@@ -5,6 +5,7 @@ log = logger.get_logger(__name__)
 
 
 class ActionRunner:
+    """Run actions"""
     def __init__(self):
         self.actions = [
             telegram_action.TelegramAction(),
@@ -17,5 +18,5 @@ class ActionRunner:
         for action in self.actions:
             try:
                 action.run()
-            except Exception as e:
-                log.error(f"{action.__class__.__name__} failed: {e}")
+            except Exception as err:
+                log.error("%s failed: %s", action.__class__.__name__, err)

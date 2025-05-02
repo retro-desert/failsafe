@@ -12,6 +12,7 @@ log = logger.get_logger(__name__)
 
 
 def listen_for_input():
+    """Listen user input"""
     fd = sys.stdin.fileno()
     old_settings = termios.tcgetattr(fd)
     try:
@@ -30,6 +31,7 @@ def listen_for_input():
 
 
 def start_input_listener():
+    """Start thread"""
     thread = threading.Thread(target=listen_for_input, daemon=True)
     thread.start()
     return thread
