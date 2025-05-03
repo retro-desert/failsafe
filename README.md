@@ -2,6 +2,7 @@
 ![Version](https://img.shields.io/github/v/tag/retro-desert/failsafe?label=version)
 ![Code Quality](https://img.shields.io/badge/code%20quality-9+%2F10-brightgreen?logo=python&labelColor=2e2e2e)
 ![Pylint](https://github.com/retro-desert/failsafe/actions/workflows/pylint.yml/badge.svg)
+[![Docker Hub](https://img.shields.io/docker/pulls/retrodesert/failsafe?style=flat)](https://hub.docker.com/r/retrodesert/failsafe)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 **Failsafe** is a terminal-based watchdog timer that trigger custom actions unless manually canceled or extended
