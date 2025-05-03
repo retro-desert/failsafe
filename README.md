@@ -35,7 +35,7 @@
     pip install -r requirements.txt
     ```
 3. **Configure the `.env` file according to the `.env.example`**
-4. **(Optional) [Add your custom actions](#adding-custom-actions)**
+4. **(Optional) [Add your custom actions](#%EF%B8%8Fadding-custom-actions)**
 
 ## ▶️Usage
 
@@ -91,7 +91,7 @@ Version 2.0.0
     LOG_FILENAME=failsafe.log
     FALLBACK_LOG_FILE=/tmp/failsafe.log
     ```
-3. **(Optional) [Add your custom actions](#adding-custom-actions)**
+3. **(Optional) [Add your custom actions](#%EF%B8%8Fadding-custom-actions)**
 4. **Build image**
     ```bash
     make build
@@ -135,7 +135,7 @@ Version 2.0.0
     LOG_FILENAME=failsafe.log
     FALLBACK_LOG_FILE=/tmp/failsafe.log
     ```
-4. **(Optional) [Add your custom actions](#adding-custom-actions)**
+4. **(Optional) [Add your custom actions](#%EF%B8%8Fadding-custom-actions)**
 5. **Run**
     ```bash
     docker-compose run --rm failsafe
