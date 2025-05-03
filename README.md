@@ -26,11 +26,11 @@
 ## 🎯 Use Cases
 **Failsafe** is useful in any scenario where inaction could lead to problems. It acts as a watchdog for processes that should not be left unattended
 ### 🆘 Personal Safety & Failsafe Trigger
-**In situations where a person might be alone, at risk, or in a potentially dangerous environment (e.g., hiking, traveling, working late), Failsafe can be preconfigured to send critical alerts to trusted contacts if no interaction is received within a set time window. This acts like a digital "dead man's switch" — useful for peace of mind in uncertain scenarios**
+In situations where a person might be alone, at risk, or in a potentially dangerous environment (e.g., hiking, traveling, working late), Failsafe can be preconfigured to send critical alerts to trusted contacts if no interaction is received within a set time window. This acts like a digital "dead man's switch" — useful for peace of mind in uncertain scenarios
 ### 🔔 Timed Alerts
-**Automatically sends notifications if the timer expires without user intervention — perfect for reminders or critical monitoring**
+Automatically sends notifications if the timer expires without user intervention — perfect for reminders or critical monitoring
 ### 🔐 Forgotten State Prevention
-**Helps prevent scenarios where you forget to stop a temporary process — like a dev server, test environment, or access session**
+Helps prevent scenarios where you forget to stop a temporary process — like a dev server, test environment, or access session
 
 ## 🛠️ Setup
 1. **Clone the repo**
@@ -69,12 +69,12 @@ Version 2.0.1
 [ FAILSAFE ACTIVE ] Time remaining: 00:59
 ```
 
-- **The program activates the timer when it starts**
-- **The user sees an interface with the ability to**
-  - **`[ C ] Cancel` - stop the timer (cancel the actions)**
-  - **`[ E ] Extend` - extend time**
-- **If the user does not react before the timer expires, connected actions (e.g. sending a message to Telegram or email) are automatically started**
-- **All actions are defined in the `actions` folder and can be extended with custom scripts**
+- The program activates the timer when it starts
+- The user sees an interface with the ability to
+  - `[ C ] Cancel` - stop the timer (cancel the actions)
+  - `[ E ] Extend` - extend time
+- If the user does not react before the timer expires, connected actions (e.g. sending a message to Telegram or email) are automatically started
+- All actions are defined in the `actions` folder and can be extended with custom scripts
 
 ## 🐳 Docker
 ### Local image - with default actions (Recommended) 
