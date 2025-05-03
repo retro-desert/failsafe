@@ -8,4 +8,4 @@ ASCII = r"""
 created by @retro-desert
 → github.com/retro-desert · eleet.nl
 """
-__version__ = "2.0.0"
+__version__ = "2.0.1"

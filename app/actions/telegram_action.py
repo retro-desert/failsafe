@@ -1,6 +1,6 @@
 """Telegram notifier"""
 import requests
-from app.actions.base import Action
+from app.core.base import Action
 from app import config
 from app.logger import get_logger
 
