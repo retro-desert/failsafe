@@ -1,10 +1,11 @@
 services:
   failsafe:
+    image: retrodesert/failsafe:latest
     container_name: failsafe
-    build: .
     stdin_open: true
     tty: true
     volumes:
       - ./logs:/failsafe/logs
+      - ./actions:/failsafe/app/actions
     env_file:
       - .env

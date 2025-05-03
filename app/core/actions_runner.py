@@ -3,7 +3,7 @@ import importlib
 import inspect
 import pkgutil
 
-from app.actions.base import Action
+from app.core.base import Action
 from app.core.container import Container
 
 
