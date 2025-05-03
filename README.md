@@ -22,6 +22,15 @@
 - 🧱**Dependency containerization**
 - 📂**Fallback logging**
 
+## 🎯 Use Cases
+**Failsafe** is useful in any scenario where inaction could lead to problems. It acts as a watchdog for processes that should not be left unattended
+### 🆘 Personal Safety & Failsafe Trigger
+**In situations where a person might be alone, at risk, or in a potentially dangerous environment (e.g., hiking, traveling, working late), Failsafe can be preconfigured to send critical alerts to trusted contacts if no interaction is received within a set time window. This acts like a digital "dead man's switch" — useful for peace of mind in uncertain scenarios**
+### 🔔 Timed Alerts
+**Automatically sends notifications if the timer expires without user intervention — perfect for reminders or critical monitoring**
+### 🔐 Forgotten State Prevention
+**Helps prevent scenarios where you forget to stop a temporary process — like a dev server, test environment, or access session**
+
 ## 🛠️ Setup
 1. **Clone the repo**
     ```bash
@@ -37,7 +46,7 @@
 3. **Configure the `.env` file according to the `.env.example`**
 4. **(Optional) [Add your custom actions](#%EF%B8%8Fadding-custom-actions)**
 
-## ▶️Usage
+## ▶️ Usage
 
 ```bash
 python -m app.main
@@ -53,11 +62,18 @@ python -m app.main
 created by @retro-desert
 → github.com/retro-desert · eleet.nl
 
-Version 2.0.0
+Version 2.0.1
 
 [ C ] Cancel | [ E ] Extend:
 [ FAILSAFE ACTIVE ] Time remaining: 00:59
 ```
+
+- **The program activates the timer when it starts**
+- **The user sees an interface with the ability to**
+  - **`[ C ] Cancel` - stop the timer (cancel the actions)**
+  - **`[ E ] Extend` - extend time**
+- **If the user does not react before the timer expires, connected actions (e.g. sending a message to Telegram or email) are automatically started**
+- **All actions are defined in the `actions` folder and can be extended with custom scripts**
 
 ## 🐳 Docker
 ### Local image - with default actions (Recommended) 
@@ -101,8 +117,7 @@ Version 2.0.0
     make run
     ```
 
-
-### Remote image
+### Remote image - without default actions
 1. **Create a working folders**
     ```bash
     mkdir -p failsafe/actions failsafe/logs
@@ -141,7 +156,15 @@ Version 2.0.0
     docker-compose run --rm failsafe
     ```
 
-## ✉️Adding custom actions
+## 🧩 Default actions
+|  Action              | Description              | Environment vars                                        |
+|----------------------|--------------------------|---------------------------------------------------------|
+| `telegram_action.py` | Send message to Telegram | `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`                    |
+| `email_action.py`    | Send email from GMail    | `EMAIL_USER`, `EMAIL_PASS`, `EMAIL_TO`, `EMAIL_SUBJECT` |
+
+It is also possible to simply disable these actions via variables: `TELEGRAM_DISABLE` and `EMAIL_DISABLE`
+
+## ✉️ Adding custom actions
 To add your own scripts, simply place them in the `./app/actions` (docker-compose - `./actions`). It will be automatically detected
 
 Dependency
